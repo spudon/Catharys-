@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catharys: Storyteller & Creative Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Light background */
+            color: #333;
+        }
+        .section-heading {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%; /* Adjust width as needed */
+            height: 3px;
+            background-color: #fca311; /* Accent color */
+            border-radius: 9999px; /* Rounded corners for the underline */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-gray-800 rounded-lg p-2 transition duration-300 ease-in-out hover:text-gray-900">Catharys</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-lg font-medium text-gray-700 hover:text-orange-600 transition duration-300 ease-in-out rounded-lg p-2">About</a>
+                <a href="#services" class="text-lg font-medium text-gray-700 hover:text-orange-600 transition duration-300 ease-in-out rounded-lg p-2">Services</a>
+                <a href="#blog" class="text-lg font-medium text-gray-700 hover:text-orange-600 transition duration-300 ease-in-out rounded-lg p-2">Blog</a>
+                <a href="#contact" class="text-lg font-medium text-gray-700 hover:text-orange-600 transition duration-300 ease-in-out rounded-lg p-2">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6">
+            <button id="close-mobile-menu" class="absolute top-4 right-4 p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <a href="#about" class="text-3xl font-medium text-gray-800 hover:text-orange-600 transition duration-300 ease-in-out rounded-lg p-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+            <a href="#services" class="text-3xl font-medium text-gray-800 hover:text-orange-600 transition duration-300 ease-in-out rounded-lg p-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a>
+            <a href="#blog" class="text-3xl font-medium text-gray-800 hover:text-orange-600 transition duration-300 ease-in-out rounded-lg p-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Blog</a>
+            <a href="#contact" class="text-3xl font-medium text-gray-800 hover:text-orange-600 transition duration-300 ease-in-out rounded-lg p-3" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+        </div>
+    </header>
+
+    <section class="relative bg-gradient-to-r from-orange-500 to-yellow-500 text-white py-20 md:py-32 overflow-hidden shadow-lg">
+        <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://placehold.co/1920x1080/FFFFFF/000000?text=Creative+Abstract+Background');"></div>
+        <div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
+                    Catharys
+                </h1>
+                <p class="text-2xl md:text-3xl font-light mb-6 drop-shadow-md">
+                    Storyteller & Creative Guide
+                </p>
+                <p class="text-lg md:text-xl mb-8 leading-relaxed">
+                    Unlocking Your Story, Guiding Your Creative Journey.
+                    Discover the power of your narrative and ignite your creative spark.
+                </p>
+                <a href="#about" class="inline-block bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-full text-xl font-semibold shadow-xl transition transform hover:scale-105 duration-300 ease-in-out">
+                    Learn More About Me
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center md:justify-end">
+                <img src="https://placehold.co/400x400/FFA500/FFFFFF?text=Catharys+Profile" alt="Catharys Profile" class="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-2xl object-cover border-4 border-white transform rotate-3 hover:rotate-0 transition duration-500 ease-in-out">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 section-heading mx-auto">About Catharys</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <img src="https://placehold.co/600x400/999999/FFFFFF?text=Catharys+Writing" alt="Catharys Writing" class="rounded-xl shadow-lg w-full h-auto object-cover transform -rotate-2 hover:rotate-0 transition duration-500 ease-in-out">
+                </div>
+                <div class="md:w-2/3 text-lg leading-relaxed">
+                    <p class="mb-6">
+                        Hello! I'm Catharys, and I believe everyone has a story worth telling. My journey into storytelling began with a deep fascination for human experiences and the unique ways we express ourselves. From a young age, I found solace and strength in narratives, both written and spoken, realizing their profound power to connect, heal, and inspire.
+                    </p>
+                    <p class="mb-6">
+                        As a creative guide, my mission is to empower you to discover, craft, and share your unique narratives. Whether you're an aspiring writer, an entrepreneur looking to articulate your brand's journey, or simply someone seeking to understand your own life's chapters, I provide a compassionate and insightful space for exploration. I'll help you navigate creative blocks, find your authentic voice, and transform your experiences into compelling stories.
+                    </p>
+                    <p class="mb-6">
+                        My approach blends narrative theory with practical, actionable strategies, ensuring that you not only understand the 'why' behind powerful storytelling but also the 'how.' Let's embark on this creative adventure together and unlock the incredible stories waiting within you.
+                    </p>
+                    <p class="font-semibold text-orange-600">
+                        "Your story is your superpower. Let's unleash it."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 section-heading mx-auto">My Services</h2>
+            <p class="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto">
+                I offer a range of services designed to help you harness the power of storytelling and unlock your creative potential.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="text-orange-600 mb-4">
+                        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13.5m0-13.5c-4.142 0-7.5 3.13-7.5 7s3.358 7 7.5 7c4.142 0 7.5-3.13 7.5-7s-3.358-7-7.5-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Personal Story Coaching</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        One-on-one sessions to help you identify, articulate, and refine your personal narrative for greater clarity and impact in your life and work.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="text-orange-600 mb-4">
+                        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Creative Writing Workshops</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Engaging group workshops designed to spark creativity, develop writing skills, and foster a supportive community for aspiring and seasoned writers.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="text-orange-600 mb-4">
+                        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.033 3-9s-1.343-9-3-9m0 18v-8.003c0-1.07.26-2.102.76-3.033M12 12V3" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Brand Story Development</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Craft compelling narratives for your business or project that resonate with your audience, build trust, and communicate your unique value proposition.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="text-orange-600 mb-4">
+                        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Public Speaking & Presentation Coaching</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Learn to deliver your stories with confidence and charisma, captivating your audience whether on stage, in a meeting, or online.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="text-orange-600 mb-4">
+                        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10V5.013a2.995 2.995 0 00-3-3.013A2.995 2.995 0 009 5.013V10m0 0C5.555 11.5 5 14.5 5 17h14c0-2.5-.555-5.5-4-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Content Strategy & Narrative Design</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Develop a cohesive content strategy rooted in powerful narratives that engage your audience and achieve your communication goals.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 text-center transform hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="text-orange-600 mb-4">
+                        <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Creative Project Mentorship</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Receive personalized guidance and feedback on your creative projects, from initial concept to final execution, ensuring your vision comes to life.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-orange-600 text-white hover:bg-orange-700 px-8 py-4 rounded-full text-xl font-semibold shadow-xl transition transform hover:scale-105 duration-300 ease-in-out">
+                    Inquire About Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 section-heading mx-auto">The Storyteller's Sanctuary</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out overflow-hidden transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/E0E0E0/333333?text=Finding+Your+Voice" alt="Blog Post Image 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Finding Your Voice in the Quiet Moments</h3>
+                        <p class="text-gray-600 text-sm mb-4">Published on May 28, 2025</p>
+                        <p class="text-gray-700 mb-4">
+                            Discover how stillness and introspection can be the most fertile ground for unearthing your authentic narrative. Learn practical tips for listening to your inner storyteller.
+                        </p>
+                        <a href="#" class="text-orange-600 hover:text-orange-800 font-medium transition duration-300 ease-in-out">Read More &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out overflow-hidden transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/D0D0D0/333333?text=Overcoming+Blocks" alt="Blog Post Image 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">The Art of Beginning Again: A Creative Restart</h3>
+                        <p class="text-gray-600 text-sm mb-4">Published on May 20, 2025</p>
+                        <p class="text-gray-700 mb-4">
+                            Feeling stuck? This post explores strategies for overcoming creative blocks and embracing the power of fresh starts in your storytelling journey.
+                        </p>
+                        <a href="#" class="text-orange-600 hover:text-orange-800 font-medium transition duration-300 ease-in-out">Read More &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out overflow-hidden transform hover:-translate-y-1">
+                    <img src="https://placehold.co/600x400/C0C0C0/333333?text=First+Drafts" alt="Blog Post Image 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Why Your Messy First Draft is Pure Gold</h3>
+                        <p class="text-gray-600 text-sm mb-4">Published on May 15, 2025</p>
+                        <p class="text-gray-700 mb-4">
+                            Embrace imperfection! Learn why the raw, unpolished first draft is an essential step in the creative process and how to celebrate its true value.
+                        </p>
+                        <a href="#" class="text-orange-600 hover:text-orange-800 font-medium transition duration-300 ease-in-out">Read More &rarr;</a>
+                    </div>
+                </article>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-orange-600 text-white hover:bg-orange-700 px-8 py-4 rounded-full text-xl font-semibold shadow-xl transition transform hover:scale-105 duration-300 ease-in-out">
+                    View All Blog Posts
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 section-heading mx-auto">Connect with Catharys</h2>
+            <div class="max-w-3xl mx-auto bg-gray-50 p-8 md:p-12 rounded-xl shadow-lg">
+                <p class="text-lg text-gray-700 text-center mb-8">
+                    Ready to explore your story? Have a question about a creative project? I'd love to hear from you.
+                </p>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-orange-500 focus:border-orange-500 transition duration-300 ease-in-out" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="
